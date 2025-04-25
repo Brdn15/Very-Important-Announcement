@@ -2,25 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Ilibre mo ko pls</title>
+  <title>My First Website</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
       text-align: center;
+      padding-top: 200px;
       background-color: #f8f8f8;
-      overflow: hidden;
-      height: 100vh;
-      position: relative;
     }
 
     h1 {
       color: #9333ea;
       font-size: 3rem;
-      margin-top: 150px;
       animation: fadeIn 2s ease-in;
     }
 
-    button {
+    p {
+      color: #6b7280;
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    #confessBtn {
       background-color: #9333ea;
       color: white;
       border: none;
@@ -29,21 +32,11 @@
       border-radius: 12px;
       cursor: pointer;
       transition: transform 0.2s;
-      position: absolute;
     }
 
-    #yesBtn:hover {
+    #confessBtn:hover {
+      transform: scale(1.1);
       background-color: #7e22ce;
-    }
-
-    #imageContainer {
-      margin-top: 40px;
-      display: none;
-      animation: fadeIn 0.5s ease-in-out;
-    }
-
-    #imageContainer img {
-      max-width: 300px;
     }
 
     @keyframes fadeIn {
@@ -54,35 +47,14 @@
 </head>
 <body>
 
-  <h1>Ilibre moko pls</h1>
+  <h1>Hello! What's up!</h1>
+  <p>Click the button below😏</p>
 
-  <button id="yesBtn" style="left: 40%; top: 50%;" onclick="showImage()">Yes 😎</button>
-  <button id="noBtn" style="left: 50%; top: 50%;" onclick="moveNo()">No 😤</button>
-
-  <div id="imageContainer">
-    <img src="https://i.pinimg.com/736x/04/95/36/04953678186cf7df466b8b43620c3ff7.jpg" alt="Arigathanks Gozaimuch">
-  </div>
+  <button id="confessBtn" onclick="showMessage()">Click Me 💌</button>
 
   <script>
-    function showImage() {
-      document.getElementById("yesBtn").style.display = "none"; // Hide YES button
-      document.getElementById("imageContainer").style.display = "block"; // Show image
-    }
-
-    function moveNo() {
-      const noBtn = document.getElementById("noBtn");
-
-      const btnWidth = noBtn.offsetWidth;
-      const btnHeight = noBtn.offsetHeight;
-
-      const maxX = window.innerWidth - btnWidth;
-      const maxY = window.innerHeight - btnHeight;
-
-      const x = Math.floor(Math.random() * maxX);
-      const y = Math.floor(Math.random() * maxY);
-
-      noBtn.style.left = `${x}px`;
-      noBtn.style.top = `${y}px`;
+    function showMessage() {
+      window.location.href = "birthday.html";
     }
   </script>
 
